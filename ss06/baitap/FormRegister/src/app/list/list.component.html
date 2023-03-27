@@ -1,0 +1,55 @@
+
+<nav>
+  <div class="logo">
+    <a href="#">LOGO</a>
+  </div>
+  <ul class="menu">
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="#">Giới thiệu</a></li>
+    <li><a href="#">Sản phẩm</a></li>
+    <li><a href="#">Dịch vụ</a></li>
+    <li><a href="#">Tin tức</a></li>
+    <li><a href="#">Liên hệ</a></li>
+  </ul>
+  <div class="search">
+    <form>
+      <input type="text" placeholder="Tìm kiếm...">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</nav>
+<div class="container">
+  <table id="table">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Country</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Phone</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of users,index as i">
+      <td>{{i}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.password}}</td>
+      <td>{{item.country}}</td>
+      <td>{{item.age}}</td>
+      <td *ngIf="item.gender">Nam</td>
+      <td *ngIf="!item.gender">Nữ</td>
+      <td>{{item.phone}}</td>
+      <td>
+        <button class="edit-btn">Edit</button>
+        <button class="delete-btn">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button class="add-btn">Add New</button>
+</div>
+<app-create-app></app-create-app>
+

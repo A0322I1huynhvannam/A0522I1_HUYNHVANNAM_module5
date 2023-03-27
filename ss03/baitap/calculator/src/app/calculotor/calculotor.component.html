@@ -1,0 +1,32 @@
+<table id="calcu">
+  <tr>
+    <td colspan="3"><input type="text" id="result" [value]="display" ></td>
+    <td><input type="button" value="c" (click)="clr()"/></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="1" (click)="dis('1')"></td>
+    <td><input type="button" value="2" (click)="dis('2')"></td>
+    <td><input type="button" value="3" (click)="dis('3')"></td>
+    <td><input type="button" value="/" (click)="oper('/')"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="4" (click)="dis('4')"></td>
+    <td><input type="button" value="5" (click)="dis('5')"></td>
+    <td><input type="button" value="6" (click)="dis('6')"></td>
+    <td><input type="button" value="*" (click)="oper('*')"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="7" (click)="dis('7')"></td>
+    <td><input type="button" value="8" (click)="dis('8')"></td>
+    <td><input type="button" value="9" (click)="dis('9')"></td>
+    <td><input type="button" value="-" (click)="oper('-')"></td>
+  </tr>
+  <tr>
+    <td><input type="button" value="0" (click)="dis('0')"></td>
+    <td><input type="button" value="." (click)="dis('.')"></td>
+
+
+    <td><input type="button" value="=" (click)="calculate()"></td>
+    <td><input type="button" value="+" (click)="oper('+')"></td>
+  </tr>
+</table>

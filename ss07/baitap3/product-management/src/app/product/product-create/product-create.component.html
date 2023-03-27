@@ -1,0 +1,26 @@
+<h2>CREATE</h2>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>Ma San Pham</td>
+      <td><input type="number" formControlName="id"></td>
+    </tr>
+    <tr>
+      <td>Ten San Pham</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Gia San Pham</td>
+      <td><input type="number" formControlName="price"></td>
+    </tr>
+    <tr>
+      <td>Mo Ta San Pham</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Tạo mới</button></td>
+    </tr>
+  </table>
+</form>
+<a routerLink="/product/list">Back To List</a>

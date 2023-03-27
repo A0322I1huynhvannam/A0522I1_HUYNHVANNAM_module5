@@ -1,0 +1,42 @@
+<form class="register-form" [formGroup]="userForm" (ngSubmit)="addUserReactive()">
+  <h2>CREATE </h2>
+  <label for="email" >Email:</label>
+  <input type="text" id="email" formControlName="email" name="email">
+  <p style="color: red" *ngIf="userForm.controls.email.hasError('required') && userForm.controls.email.touched">Email không được để trống</p>
+  <p style="color: red" *ngIf="userForm.controls.email.hasError('email')">Email không hợp lệ</p>
+  <label for="Password">Password :</label>
+  <input type="Password" formControlName="password" id="Password">
+  <p style="color: red" *ngIf="userForm.controls.password.hasError('required') && userForm.controls.password.touched">password không được để trống</p>
+  <p style="color: red" *ngIf="userForm.controls.password.hasError('minlength')">Độ dài tối thiểu bằng 6</p>
+  <label >Confirm password :</label>
+  <input type="Password" formControlName="passwordConfirm">
+  <div *ngIf="userForm.hasError('invalidPasswordConfirm')">
+    <p style="color: red"> Password không trùng </p>
+  </div>
+  <label>Country:</label>
+<!--  <select formControlName="country">-->
+<!--    <option *ngFor="let item of country">{{item}}</option>-->
+<!--  </select>-->
+
+  <select formControlName="country">
+    <option value="1">Viet Nam</option>
+    <option value="2">Lao</option>
+    <option value="3">Thai lan</option>
+  </select>
+  <label for="age">Age :</label>
+  <input type="number" id="age" formControlName="age">
+  <p style="color: red" *ngIf="userForm.controls.age.hasError('required') && userForm.controls.age.touched">Tuổi không được để trống</p>
+  <label >Giới tính:</label>
+  <div class="gender-container" formControlName="gender">
+    <input type="radio" id="male" name="gender" >
+    <label for="male">Nam</label>
+    <input type="radio" id="female" name="gender">
+    <label for="female">Nữ</label>
+  </div>
+  <label for="phone">Phone :</label>
+  <input type="number" id="phone" formControlName="phone">
+  <div class="action-container">
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+  </div>
+</form>

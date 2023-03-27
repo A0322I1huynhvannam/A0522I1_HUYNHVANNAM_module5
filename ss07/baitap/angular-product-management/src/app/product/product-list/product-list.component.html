@@ -1,0 +1,68 @@
+<!--<h1>Danh sách sản phẩm</h1>-->
+<!--<table>-->
+<!--  <tr>-->
+<!--    <td>STT</td>-->
+<!--    <td>Tên</td>-->
+<!--    <td>Giá</td>-->
+<!--    <td>Mô tả</td>-->
+<!--  </tr>-->
+<!--  <tr *ngFor="let product of products; index as i">-->
+<!--    <td>{{i + 1}}</td>-->
+<!--    <td>{{product.name}}</td>-->
+<!--    <td>{{product.price}}</td>-->
+<!--    <td>{{product.description}}</td>-->
+<!--  </tr>-->
+<!--</table>-->
+<!--<nav>-->
+<!--  <div class="logo">-->
+<!--    <a href="#">LOGO</a>-->
+<!--  </div>-->
+<!--  <ul class="menu">-->
+<!--    <li><a href="#">Trang chủ</a></li>-->
+<!--    <li><a href="#">Giới thiệu</a></li>-->
+<!--    <li><a href="#">Sản phẩm</a></li>-->
+<!--    <li><a href="#">Dịch vụ</a></li>-->
+<!--    <li><a href="#">Tin tức</a></li>-->
+<!--    <li><a href="#">Liên hệ</a></li>-->
+<!--  </ul>-->
+<!--  <div class="search">-->
+<!--    <form>-->
+<!--      <input type="text" placeholder="Tìm kiếm...">-->
+<!--      <button type="submit"><i class="fa fa-search"></i></button>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</nav>-->
+<div class="container">
+  <table id="table">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Ten San Pham</th>
+      <th>Gia San Pham</th>
+      <th>Mo Ta Chi Tiet
+      <th>Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products,index as i">
+          <td>{{i + 1}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.description}}</td>
+      <td>
+        <button class="delete-btn">
+          <a routerLink="/product/delete">
+            Delete
+          </a>
+        </button>
+        <button class="edit-btn">Edit</button>
+      </td>
+    </tr>
+    </tbody>
+    <a routerLink="/product/create">
+      <button>Add New</button>
+    </a>
+  </table>
+</div>
+

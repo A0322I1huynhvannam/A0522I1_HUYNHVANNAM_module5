@@ -1,0 +1,37 @@
+<div class="container">
+  <table id="table">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Ten San Pham</th>
+      <th>Gia San Pham</th>
+      <th>Mo Ta Chi Tiet
+      <th>Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products,index as i">
+      <td>{{i + 1}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.description}}</td>
+      <td>
+        <button class="delete-btn">
+          <a [routerLink]="['/product/delete',product.id]">
+            Delete
+          </a>
+        </button>
+        <button class="edit-btn">
+          <a [routerLink]="['/product/edit',product.id]" >
+            Edit
+          </a>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+    <a routerLink="/product/create">
+      <button>Add New</button>
+    </a>
+  </table>
+</div>

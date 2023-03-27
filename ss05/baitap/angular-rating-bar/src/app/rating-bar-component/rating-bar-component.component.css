@@ -1,0 +1,12 @@
+.css1{
+  color: crimson;
+  background: aqua;
+  font-size: 50px;
+}
+.rating-bar{
+  color: coral;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  font-size: 20px;
+}
