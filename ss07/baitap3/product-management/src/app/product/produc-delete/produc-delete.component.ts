@@ -3,9 +3,8 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {ProductService} from "../../service/product.service";
 import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {Product} from "../../../model/product";
-import { ModalModule } from 'ngb-modal';
+import {ModalModule} from 'ngb-modal';
 import Swal from "sweetalert2/dist/sweetalert2.js";
-
 
 
 @Component({
@@ -17,23 +16,28 @@ export class ProducDeleteComponent implements OnInit {
 
   product: Product = {};
   id: number;
+
   constructor(private activatedRoute: ActivatedRoute,
               private productService: ProductService,
               private route: Router) {
-    this.activatedRoute.paramMap.subscribe(next =>{
+    this.activatedRoute.paramMap.subscribe(next => {
       const id = next.get('id');
-      if (id != null){
-        this.product = this.productService.findById(parseInt(id));
-        console.log(this.product);
-        this.deleteProduct();
+      if (id != null) {
+        this.productService.findById(parseInt(id)).subscribe(data => {
+          console.log(data);
+          this.product = data;
+          this.deleteProduct();
+        });
       }
     }, error => {
     }, () => {
     });
   }
+
   ngOnInit(): void {
   }
-  deleteProduct(){
+
+  deleteProduct() {
     Swal.fire({
       title: 'Are you sure want to remove?' + this.product.name,
       text: 'You will not be able to recover this product!',
@@ -43,7 +47,9 @@ export class ProducDeleteComponent implements OnInit {
       cancelButtonText: 'No, keep it'
     }).then((result) => {
       if (result.value) {
-        this.productService.deleteProduct(this.product.id);
+        this.productService.deleteProduct(this.product.id).subscribe(next => {
+
+        });
         Swal.fire(
           'Deleted!',
           'Your imaginary file has been deleted.',

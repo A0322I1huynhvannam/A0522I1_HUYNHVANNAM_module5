@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Product} from "../../model/product";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -32,32 +34,27 @@ export class ProductService {
     price: 1895000,
     description: 'Like new'
   }];
-
-  constructor() {
+  private API_URL = "http://localhost:3000/products/"
+  constructor(private httpClient : HttpClient) {
   }
 
-  getAll() {
-    return this.products;
+  getAll() : Observable<Product[]> {
+    return this.httpClient.get<Product[]>("http://localhost:3000/products");
   }
 
   saveProduct(product) {
-    this.products.push(product);
+    return this.httpClient.post("http://localhost:3000/products",product);
   }
-  findById(id: number) {
-    return this.products.find(product => product.id === id);
+  findById(id: number):Observable<any> {
+    return this.httpClient.get<any>(this.API_URL+ id);
   }
 
-  updateProduct(id: number, product: Product) {
-    for (let i = 0; i < this.products.length; i++) {
-      if (this.products[i].id === id) {
-        this.products[i] = product;
-      }
+  updateProduct(id: number, product: any): Observable<any>{
+   return this.httpClient.put("http://localhost:3000/products/" + id, product);
+  }
+
+  deleteProduct(id: number):Observable<any> {
+   return this.httpClient.delete("http://localhost:3000/products/" + id);
     }
-  }
 
-  deleteProduct(id: number) {
-    this.products = this.products.filter(product => {
-      return product.id !== id;
-    });
-  }
 }
