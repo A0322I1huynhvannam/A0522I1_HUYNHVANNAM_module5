@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "IP!5",
+      "price": 149009,
+      "description": "Sản xuất năm 2020",
+      "category": {
+        "id": 1,
+        "name": "SmartPhone"
+      }
+    },
+    {
+      "id": 4,
+      "name": "TV Sony",
+      "price": 149009,
+      "description": "Sản xuất năm 20202",
+      "category": {
+        "id": 2,
+        "name": "TV"
+      }
+    }
+  ],
+  "categorys": [
+    {
+      "id": 1,
+      "name": "SmartPhone"
+    },
+    {
+      "id": 2,
+      "name": "TV"
+    }
+  ]
+}

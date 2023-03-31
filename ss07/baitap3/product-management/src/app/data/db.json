@@ -11,6 +11,12 @@
       "name": "IPhone 1345",
       "price": 240000045,
       "description": "New54522"
+    },
+    {
+      "id": 3,
+      "name": null,
+      "price": null,
+      "description": null
     }
   ]
 }

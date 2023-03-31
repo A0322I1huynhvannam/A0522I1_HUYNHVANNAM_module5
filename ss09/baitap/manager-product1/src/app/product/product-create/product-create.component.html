@@ -1,0 +1,37 @@
+<form class="register-form" [formGroup]="productForm"  (ngSubmit)="submitProduct()">
+  <h2>Thêm mới sản phẩm</h2>
+  <label>ID Sản phẩm:</label>
+  <input type="text" formControlName="id">
+  <p style="color: red" *ngIf="productForm.controls.id.hasError('required')&&productForm.controls.id.touched">
+    *ID không được để trống
+  </p>
+  <label >Tên sản phẩm:</label>
+  <input type="text" formControlName="name" >
+  <p style="color: red" *ngIf="productForm.controls.name.hasError('required')&&productForm.controls.name.touched">
+    *Tên sản phẩm không được để trống
+  </p>
+  <label >Loại sản phẩm:</label>
+  <select formControlName="category">
+    <option *ngFor="let item of categorys" [ngValue]="item">{{item.name}}</option>
+  </select>
+  <p style="color: red" *ngIf="productForm.controls.category.hasError('required')&&productForm.controls.category.touched">
+    *Vui lòng nhập loại sản phẩm
+  </p>
+  <label >Giá sản phẩm:</label>
+  <input type="number" formControlName="price">
+  <p style="color: red" *ngIf="productForm.controls.price.hasError('required')&&productForm.controls.price.touched">
+    *Giá sản phẩm không được để trống
+  </p>
+  <p style="color: red" *ngIf="productForm.controls.price.hasError('min')&&productForm.controls.price.touched">
+    *Giá sản phẩm tối thiểu lớn hơn 1000 VND
+  </p>
+  <label>Mô tả về sản phẩm:</label>
+  <input type="text" formControlName="description">
+  <p style="color: red" *ngIf="productForm.controls.description.hasError('required')&&productForm.controls.description.touched">
+    *Vui lòng mô tả sản phẩm
+  </p>
+  <div class="action-container">
+    <a routerLink="/product/list" class="back">Back</a>
+    <input type="submit" value="Submit">
+  </div>
+</form>
