@@ -1,31 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
-import {Product} from '../../../model/product';
-import {ProductService} from '../../service/product.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import {Customer} from "../../model/customer";
+import {ActivatedRoute, Router} from "@angular/router";
+import {CustomerService} from "../../service/customer.service";
 import Swal from 'sweetalert2';
 
-@Component({
-  selector: 'app-product-delete',
-  templateUrl: './product-delete.component.html',
-  styleUrls: ['./product-delete.component.css']
-})
-export class ProductDeleteComponent implements OnInit {
 
-  product: Product = {};
-  id: number;
+@Component({
+  selector: 'app-delete-customer',
+  templateUrl: './delete-customer.component.html',
+  styleUrls: ['./delete-customer.component.css']
+})
+export class DeleteCustomerComponent implements OnInit {
+
+  customer : Customer = {};
+  id: string;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private productService: ProductService,
+              private customerService:CustomerService,
               private route: Router) {
     this.activatedRoute.paramMap.subscribe(next => {
       const id = next.get('id');
       if (id != null) {
-        // tslint:disable-next-line:radix
-        this.productService.findById(parseInt(id)).subscribe(data => {
+        this.customerService.finByIdCustomer(id).subscribe(data => {
           console.log(data);
-          this.product = data;
-          this.deleteProduct();
+          this.customer = data;
+          this.deleteCustomer();
         });
       }
     }, error => {
@@ -35,9 +34,9 @@ export class ProductDeleteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  deleteProduct() {
+  deleteCustomer() {
     Swal.fire({
-      title: 'Are you sure want to remove?' + this.product.name,
+      title: 'Are you sure want to remove?' + this.customer.customerName,
       text: 'You will not be able to recover this product!',
       icon: 'warning',
       showCancelButton: true,
@@ -45,24 +44,24 @@ export class ProductDeleteComponent implements OnInit {
       cancelButtonText: 'No, keep it'
     }).then((result) => {
       if (result.value) {
-        this.productService.deleteProduct(this.product.id).subscribe(next => {
+        this.customerService.deleteCustomer(this.customer.id).subscribe(next => {
 
         });
         Swal.fire(
           'Deleted!',
           'Your imaginary file has been deleted.',
           'success'
-        );
-        this.route.navigateByUrl('/product/list');
+        )
+        this.route.navigateByUrl('/customer/list');
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire(
           'Cancelled',
           'Your imaginary file is safe :)',
           'error'
-        );
-        this.route.navigateByUrl('/product/list');
+        )
+        this.route.navigateByUrl('/customer/list');
       }
-    });}
+    })}
 
 
 }

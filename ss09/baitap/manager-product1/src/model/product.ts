@@ -1,9 +1,9 @@
-import {Category} from "./category";
+import {Category} from './category';
 
 export interface Product {
-  id?:number;
-  name?:string;
-  price?:number;
+  id?: number;
+  name?: string;
+  price?: number;
   description?: string;
-  category?:Category;
+  category?: Category;
 }

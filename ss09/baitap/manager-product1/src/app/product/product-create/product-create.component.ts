@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {Category} from "../../../model/category";
-import {ProductService} from "../../service/product.service";
-import {Router} from "@angular/router";
-import {CategoryService} from "../../service/category.service";
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {Category} from '../../../model/category';
+import {ProductService} from '../../service/product.service';
+import {Router} from '@angular/router';
+import {CategoryService} from '../../service/category.service';
 
 @Component({
   selector: 'app-product-create',
@@ -21,7 +21,7 @@ export class ProductCreateComponent implements OnInit {
       }, error => {
       },
       () => {
-      })
+      });
   }
 
   ngOnInit(): void {
@@ -39,14 +39,14 @@ export class ProductCreateComponent implements OnInit {
     if (!this.productForm.valid) {
     } else {
       this.productService.saveProduct(this.productForm.value).subscribe(next => {
-          this.router.navigateByUrl("/product/list");
+          this.router.navigateByUrl('/product/list');
         }, error => {
-          console.log("Error fail")
+          console.log('Error fail');
         },
         () => {
-        })
+        });
     }
-    ;
+    
   }
 
 }

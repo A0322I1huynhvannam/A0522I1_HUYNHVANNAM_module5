@@ -13,12 +13,9 @@
     {
       "id": 4,
       "name": "TV Sony",
-      "price": 149009,
+      "price": 99999,
       "description": "Sản xuất năm 20202",
-      "category": {
-        "id": 2,
-        "name": "TV"
-      }
+      "category": "TV Sony"
     }
   ],
   "categorys": [

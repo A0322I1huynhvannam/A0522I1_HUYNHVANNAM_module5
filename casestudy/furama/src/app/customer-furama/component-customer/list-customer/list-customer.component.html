@@ -1,0 +1,47 @@
+<router-outlet></router-outlet>
+<div class="container">
+
+<!--  <table id="table">-->
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Ten Khach Hang</th>
+      <th>Ngay Sinh</th>
+      <th>Gioi Tinh</th>
+      <th>CMND</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Loai Khach</th>
+      <th>Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customers,index as i">
+      <td>{{i + 1}}</td>
+      <td>{{customer.customerName}}</td>
+      <td>{{customer.birthday}}</td>
+      <td>{{customer.gender}}</td>
+      <td>{{customer.idCard}}</td>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.customerType.name}}</td>
+      <td>
+        <button class="delete-btn">
+          <a [routerLink]="['/customer/delete',customer.id]">
+            Delete
+          </a>
+        </button>
+        <button style="width: 60px !important;" class="edit-btn">
+          <a  [routerLink]="['/customer/update',customer.id]" >
+            Edit
+          </a>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+    <a routerLink="/customer/create">
+      <button>Add New</button>
+    </a>
+<!--  </table>-->
+</div>

@@ -1,0 +1,84 @@
+<form class="register-form" [formGroup]="customerForm"  (ngSubmit)="updateCustomer()">
+  <div class="modal-header">
+    <h4 class="modal-title">Chinh Sua khách hàng</h4>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="customerForm">
+      <div class="row">
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Mã khách hàng: </label>
+          <input type="text" class="form-control input-modal-addNew" formControlName="id" disabled>
+          <span class="errormessage" *ngIf="customerForm.controls.id.hasError('required') && customerForm.controls.id.touched">
+            *Vui lòng nhập mã khách hàng</span>
+        </div>
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Tên khách hàng: </label>
+          <input type="text" class="form-control input-modal-addNew" formControlName="customerName">
+
+          <span class="errormessage"
+                *ngIf="customerForm.controls.customerName.hasError('required') && customerForm.controls.customerName.touched">
+            *Vui lòng nhập tên khách hàng</span>
+          <span class="errormessage"
+                *ngIf="customerForm.controls.customerName.hasError('minLength') && customerForm.controls.customerName.touched">
+            *Độ dài họ và tên tối thiểu 3 kí tự</span>
+        </div>
+        <div class="col-6 div-select-modal-addNew">
+          <label class="tilte-input-modal-addNew">Loại khách hàng: </label><br>
+          <select class="form-select select-modal-addNew" formControlName="customerType">
+            <option selected *ngFor="let item of customertypes"
+                    [ngValue]="item">{{item.name}}</option>
+          </select><br><br>
+        </div>
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Ngày sinh khách hàng: </label>
+          <input type="date" class="form-control input-modal-addNew" formControlName="birthday">
+        </div>
+
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Giới tính khách hàng: </label>
+          <!--        <input type="text" class="form-control input-modal-addNew" formControlName="gender">-->
+          <!--        <div class="form-check">-->
+          <!--          <input type="radio" name="gender" formControlName="gender">-->
+          <!--          <label class="form-check-label">-->
+          <!--            Nam-->
+          <!--          </label>-->
+          <!--        </div>-->
+          <!--        <div class="form-check">-->
+          <!--          <input type="radio" name="gender" formControlName="gender" >-->
+          <!--          <label class="form-check-label">-->
+          <!--            Nu-->
+          <!--          </label>-->
+          <!--        </div>-->
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <div>
+              <input id="male" type="radio" value="" name="gender" formControlName="gender">
+              <label for="male">Male</label>
+            </div>
+            <div>false
+              <input id="female" type="radio" value="female" name="gender" formControlName="gender">
+              <label for="female">Female</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Mã thẻ khách hàng: </label>
+          <input type="text" class="form-control input-modal-addNew" formControlName="idCard">
+        </div>
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Số điện khách hàng: </label>
+          <input type="text" class="form-control input-modal-addNew" formControlName="phone">
+        </div>
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Emai khách hàng: </label>
+          <input type="text" class="form-control input-modal-addNew" formControlName="email">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="action-container">
+    <a routerLink="/customer/list" class="back">Back</a>
+    <input type="submit" value="Submit">
+  </div>
+</form>
