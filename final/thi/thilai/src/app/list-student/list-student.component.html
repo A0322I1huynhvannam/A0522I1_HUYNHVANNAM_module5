@@ -1,0 +1,65 @@
+<router-outlet></router-outlet>
+<div class="container">
+  <h2>DANH SACH SINH VIEN</h2>
+
+  <table id="table">
+    <div class="container-table row">
+      <form style="float: left;margin-left: 20px" [formGroup]="Search" (ngSubmit)="submit()">
+        <table>
+          <tr>
+            <td><input class="form-control"  formControlName="name" type="text" placeholder="enter your name"/></td>
+            <td><button type="submit" class="btn btn-primary" >Search</button></td>
+          </tr>
+        </table>
+      </form>
+      <!--  <button onclick = "history.back()">Back </button>-->
+      <tr>
+        <p *ngIf="mess">
+          Không tìm thấy tên
+        </p>
+
+      </tr>
+      <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+          <th>STT</th>
+          <th>Ma Sinh Vien</th>
+          <th>Tên Sinh Vien</th>
+          <th>Ten Nhom</th>
+          <th>Ten De tai</th>
+          <th>Giao Vien Huong Dan</th>
+          <th>Emai</th>
+          <th>Sdt</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr *ngFor="let student of students | paginate: {itemsPerPage: 2, currentPage: p} ,index as i " >
+          <td>{{i + 1}}</td>
+          <td>{{student.id}}</td>
+          <td>{{student.tenSinhVien}}</td>
+          <td>{{student.tenNhom}}</td>
+          <td>{{student.tenDeTai}}</td>
+          <td>{{student.giaoVienHuongDan}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.soDienThoai}}</td>
+          <td>
+            <button class="delete-btn" [routerLink]="['/students/delete',student.id]">
+              XOA
+            </button>
+            <button style="width: 60px !important;" class="edit-btn"  [routerLink]="['/students/update',student.id]">
+              SUA
+            </button>
+          </td>
+
+        </tr>
+        </tbody>
+        <a routerLink="/students/create">
+          <button>Add New</button>
+        </a>
+      </table>
+      <pagination-controls (pageChange)="p =$event"></pagination-controls>
+    </div>
+  </table>
+</div>

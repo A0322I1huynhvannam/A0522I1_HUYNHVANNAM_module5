@@ -1,19 +1,6 @@
 {
   "customers": [
     {
-      "id": "123",
-      "customerName": "123",
-      "birthday": "2023-03-31",
-      "gender": "male",
-      "idCard": "123",
-      "phone": "123",
-      "email": "123",
-      "customerType": {
-        "id": 3,
-        "name": "gold"
-      }
-    },
-    {
       "id": "1",
       "customerName": "123",
       "birthday": "2023-04-06",
@@ -30,26 +17,39 @@
       "id": "1221",
       "customerName": "hagaa",
       "birthday": "2023-04-22",
-      "gender": "female",
+      "gender": "",
       "idCard": "62351",
       "phone": "83728112",
       "email": "Nam@gmail.com",
       "customerType": {
-        "id": 2,
-        "name": "Platinum"
+        "id": 4,
+        "name": "silver"
       }
     },
     {
       "id": "12322",
-      "customerName": "nam33",
+      "customerName": "231",
       "birthday": "2023-04-13",
       "gender": "female",
       "idCard": "213",
       "phone": "123456",
       "email": "nam@gmail.com",
       "customerType": {
-        "id": 4,
-        "name": "silver"
+        "id": 2,
+        "name": "Platinum"
+      }
+    },
+    {
+      "id": "342342342",
+      "customerName": "324432",
+      "birthday": "2023-04-13",
+      "gender": "female",
+      "idCard": "243",
+      "phone": "243432",
+      "email": "Bao@gmail.com",
+      "customerType": {
+        "id": 3,
+        "name": "gold"
       }
     }
   ],

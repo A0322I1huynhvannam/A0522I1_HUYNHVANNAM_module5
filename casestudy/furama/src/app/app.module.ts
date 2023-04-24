@@ -11,6 +11,7 @@ import { ListCustomerComponent } from './customer-furama/component-customer/list
 import { DeleteCustomerComponent } from './customer-furama/component-customer/delete-customer/delete-customer.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {HttpClientModule} from "@angular/common/http";
         AppRoutingModule,
         ReactiveFormsModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+      NgxPaginationModule
     ],
   providers: [],
   bootstrap: [AppComponent]

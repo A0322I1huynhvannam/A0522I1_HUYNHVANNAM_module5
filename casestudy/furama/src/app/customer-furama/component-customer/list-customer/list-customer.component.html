@@ -1,47 +1,66 @@
 <router-outlet></router-outlet>
 <div class="container">
+  <h2>DANH SACH KHACH HANG</h2>
+  <form style="float: left;margin-left: 20px" [formGroup]="Search" (ngSubmit)="submit()">
+    <table>
+      <tr>
+        <td><input class="form-control"  formControlName="name" type="text" placeholder="enter your name"/></td>
+        <td><button type="submit" class="btn btn-primary" >Search</button></td>
+      </tr>
+    </table>
+  </form>
+<!--  <button onclick = "history.back()">Back </button>-->
+  <tr>
+    <p *ngIf="mess">
+      Không tìm thấy tên
+    </p>
 
-<!--  <table id="table">-->
-    <thead>
-    <tr>
-      <th>STT</th>
-      <th>Ten Khach Hang</th>
-      <th>Ngay Sinh</th>
-      <th>Gioi Tinh</th>
-      <th>CMND</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Loai Khach</th>
-      <th>Action</th>
+  </tr>
+  <table id="table">
+    <div class="container-table row">
+      <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+          <th>STT</th>
+          <th>Mã khách hàng</th>
+          <th>Tên khách hàng</th>
+          <th>Ngày sinh khách hàng</th>
+          <th>Giới tính khách hàng</th>
+          <th>Mã thẻ khách hàng</th>
+          <th>Số điện khách hàng</th>
+          <th>Emai khách hàng</th>
+          <th>Loại khách hàng</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
 
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let customer of customers,index as i">
+    <tr *ngFor="let customer of customers | paginate: {itemsPerPage: 2, currentPage: p},index as i " >
       <td>{{i + 1}}</td>
+      <td>{{customer.id}}</td>
       <td>{{customer.customerName}}</td>
-      <td>{{customer.birthday}}</td>
+      <td>{{customer.birthday | date: "dd/MM/yyyy"}}</td>
       <td>{{customer.gender}}</td>
       <td>{{customer.idCard}}</td>
       <td>{{customer.phone}}</td>
       <td>{{customer.email}}</td>
       <td>{{customer.customerType.name}}</td>
       <td>
-        <button class="delete-btn">
-          <a [routerLink]="['/customer/delete',customer.id]">
-            Delete
-          </a>
+        <button class="delete-btn" [routerLink]="['/customer/delete',customer.id]">
+          Delete
         </button>
-        <button style="width: 60px !important;" class="edit-btn">
-          <a  [routerLink]="['/customer/update',customer.id]" >
-            Edit
-          </a>
+        <button style="width: 60px !important;" class="edit-btn"  [routerLink]="['/customer/update',customer.id]">
+          Edit
         </button>
       </td>
+
     </tr>
     </tbody>
     <a routerLink="/customer/create">
       <button>Add New</button>
     </a>
-<!--  </table>-->
+        <pagination-controls (pageChange)="p =$event"></pagination-controls>
+  </table>
+</div>
+  </table>
 </div>

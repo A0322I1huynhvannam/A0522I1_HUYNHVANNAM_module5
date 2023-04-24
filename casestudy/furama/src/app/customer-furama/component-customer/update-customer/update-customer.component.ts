@@ -40,7 +40,7 @@ export class UpdateCustomerComponent implements OnInit {
             idCard: new FormControl(this.customer.idCard, [Validators.required]),
             phone: new FormControl(this.customer.phone, [Validators.required]),
             email: new FormControl(this.customer.email, [Validators.required, Validators.email]),
-            customerType: new FormControl(this.customer.customerName, [Validators.required]),
+            customerType: new FormControl(this.customer.customerType, [Validators.required]),
           })
         })
       }
@@ -58,8 +58,12 @@ export class UpdateCustomerComponent implements OnInit {
       idCard: new FormControl(this.customer.idCard, [Validators.required]),
       phone: new FormControl(this.customer.phone, [Validators.required]),
       email: new FormControl(this.customer.email, [Validators.required, Validators.email]),
-      customerType: new FormControl(this.customer.customerName, [Validators.required]),
+      customerType: new FormControl(this.customer.customerType, [Validators.required]),
     })
+  }
+
+  compare(c1: any, c2: any): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
 
   updateCustomer() {

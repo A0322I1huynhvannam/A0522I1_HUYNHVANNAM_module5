@@ -1,0 +1,72 @@
+<form class="register-form" [formGroup]="studentForm"  (ngSubmit)="submitStudents()">
+  <div class="modal-header">
+    <h4 class="modal-title">Them Sinh Vien</h4>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="studentForm">
+      <div class="row">
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Ma Sinh Vien: </label>
+          <input type="text" class="form-control input-modal-addNew" formControlName="id">
+          <span class="errormessage" *ngIf="studentForm.controls.id.hasError('required') && studentForm.controls.id.touched">
+            *Vui lòng nhập</span>
+        </div>
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Ten Sinh Vien: </label>
+          <input type="text" class="form-control input-modal-addNew" formControlName="tenSinhVien">
+          <span class="errormessage"
+                *ngIf="studentForm.controls.tenSinhVien.hasError('required') && studentForm.controls.tenSinhVien.touched">
+            *Vui lòng nhập </span>
+        </div>
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Ten Nhom</label>
+          <select class="form-select" formControlName="tenNhom">
+            <option value="nhom 1">nhom 1</option>
+            <option value="nhom 2">nhom 2</option>
+            <option value="nhom 3">nhom 3</option>
+          </select>
+          <span class="errormessage"
+                *ngIf="studentForm.controls.tenNhom.hasError('required') && studentForm.controls.tenNhom.touched">
+            *Vui lòng nhập </span>
+        </div>
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Ten De Tai: </label>
+          <input type="text" class="form-control input-modal-addNew" formControlName="tenDeTai">
+          <span class="errormessage"
+                *ngIf="studentForm.controls.tenDeTai.hasError('required') && studentForm.controls.tenDeTai.touched">
+            *Vui lòng nhập </span>
+        </div>
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Giao Vien Huong Dan</label>
+          <select class="form-select" formControlName="giaoVienHuongDan">
+            <option value="GV CONG">GV CONG</option>
+            <option value="GV HAI">GV HAI</option>
+            <option value="GV TRUNG">GV TRUNG</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">Emai Sinh Vien: </label>
+          <input type="text" class="form-control input-modal-addNew" formControlName="email">
+          <span class="errormessage"
+                *ngIf="studentForm.controls.email.hasError('required') && studentForm.controls.email.touched">
+            *Vui lòng nhập </span>
+        </div>
+        <div class="col-6">
+          <label class="tilte-input-modal-addNew">So Dien Thoai Sinh Vien: </label>
+          <input type="text" class="form-control input-modal-addNew" formControlName="soDienThoai">
+          <span class="errormessage"
+                *ngIf="studentForm.controls.soDienThoai.hasError('required') && studentForm.controls.soDienThoai.touched">
+            *Vui lòng nhập </span>
+          <span class="errormessage"
+                *ngIf="studentForm.controls.soDienThoai.hasError('pattern') && studentForm.controls.soDienThoai.touched">
+            So dien thoai co 10 den 12 so </span>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <div class="action-container">
+    <a routerLink="/students/list" class="back">THOAT</a>
+    <input type="submit" value="Submit">
+  </div>
+</form>

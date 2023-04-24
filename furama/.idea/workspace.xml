@@ -2,9 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd8439f9-8ad1-45e1-8436-1d069d433bdf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ss03/baitap/color/angular-color" beforeDir="false" afterPath="$PROJECT_DIR$/../ss03/baitap/color/angular-color" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss03/thuchanh/angular-show-pet-info" beforeDir="false" afterPath="$PROJECT_DIR$/../ss03/thuchanh/angular-show-pet-info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss04/baitap/hackernews" beforeDir="false" afterPath="$PROJECT_DIR$/../ss04/baitap/hackernews" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/contract-furama/model/contract.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../doan/.idea/doan.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../doan1/.idea/doan1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../doan1/thanhly/src/html/prototype.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../doan1/thanhly/src/html/prototype.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../doan1/thanhly1/prototype.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final/.idea/final.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final/thi/.idea/thi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final/thi/thilai/src/model/student.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A0522I1_HUYNHVANNAM_module5" beforeDir="false" afterPath="$PROJECT_DIR$/../A0522I1_HUYNHVANNAM_module5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/create-customer/create-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/create-customer/create-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/delete-customer/delete-customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/delete-customer/delete-customer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/list-customer/list-customer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/list-customer/list-customer.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/list-customer/list-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/list-customer/list-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/list-customer/list-customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/list-customer/list-customer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/update-customer/update-customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/update-customer/update-customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/update-customer/update-customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/component-customer/update-customer/update-customer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/data/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/data/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/service/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/customer-furama/service/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/app/layout/header-admin/header-admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/app/layout/header-admin/header-admin.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../casestudy/furama/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../casestudy/furama/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss09/baitap/manager-product1/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ss09/baitap/manager-product1/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss09/baitap/manager-product1/src/data/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ss09/baitap/manager-product1/src/data/db.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../casestudy" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -36,6 +62,8 @@
       <option name="presentableId" value="Default" />
       <updated>1679483457911</updated>
       <workItem from="1679483459100" duration="127000" />
+      <workItem from="1681736475251" duration="134000" />
+      <workItem from="1682246643320" duration="32000" />
     </task>
     <servers />
   </component>
@@ -43,9 +71,9 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="548" y="149" key="FileChooserDialogImpl" timestamp="1679483582901">
+    <state x="548" y="149" key="FileChooserDialogImpl" timestamp="1682246669489">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="548" y="149" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1679483582901" />
+    <state x="548" y="149" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1682246669489" />
   </component>
 </project>

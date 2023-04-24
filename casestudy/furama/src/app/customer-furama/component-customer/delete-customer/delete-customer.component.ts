@@ -14,6 +14,7 @@ export class DeleteCustomerComponent implements OnInit {
 
   customer : Customer = {};
   id: string;
+  private Swal: any;
 
   constructor(private activatedRoute: ActivatedRoute,
               private customerService:CustomerService,
@@ -35,7 +36,7 @@ export class DeleteCustomerComponent implements OnInit {
   }
 
   deleteCustomer() {
-    Swal.fire({
+    this.Swal.fire({
       title: 'Are you sure want to remove?' + this.customer.customerName,
       text: 'You will not be able to recover this product!',
       icon: 'warning',

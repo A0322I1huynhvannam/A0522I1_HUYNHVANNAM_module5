@@ -24,7 +24,7 @@
         </div>
         <div class="col-6 div-select-modal-addNew">
           <label class="tilte-input-modal-addNew">Loại khách hàng: </label><br>
-          <select class="form-select select-modal-addNew" formControlName="customerType">
+          <select class="form-select select-modal-addNew" formControlName="customerType" [compareWith]="compare">
             <option selected *ngFor="let item of customertypes"
                     [ngValue]="item">{{item.name}}</option>
           </select><br><br>

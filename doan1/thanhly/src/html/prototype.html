@@ -1,0 +1,359 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <style>
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .responstable {
+      margin: 1em 0;
+      width: 100%;
+      overflow: hidden;
+      background: #FFF;
+      color: #024457;
+      border-radius: 10px;
+      border: 1px solid #EE4D2D;;
+    }
+
+    .responstable tr {
+      border: 1px solid #D9E4E6;
+    }
+
+    .responstable tr:nth-child(odd) {
+      background-color: #EAF3F3;
+    }
+
+    .responstable th {
+      display: none;
+      border: 1px solid #FFF;
+      background-color: #EE4D2D;;
+      color: #FFF;
+      padding: 1em;
+    }
+
+    .responstable th:first-child {
+      display: table-cell;
+      text-align: center;
+    }
+
+    .responstable th:nth-child(2) {
+      display: table-cell;
+    }
+
+    .responstable th:nth-child(2) span {
+      display: none;
+    }
+
+    .responstable th:nth-child(2):after {
+      content: attr(data-th);
+    }
+
+    @media (min-width: 480px) {
+      .responstable th:nth-child(2) span {
+        display: block;
+      }
+
+      .responstable th:nth-child(2):after {
+        display: none;
+      }
+    }
+
+    .responstable td {
+      display: block;
+      word-wrap: break-word;
+      max-width: 7em;
+    }
+
+    .responstable td:first-child {
+      display: table-cell;
+      text-align: center;
+      border-right: 1px solid #D9E4E6;
+    }
+
+
+    @media (min-width: 480px) {
+      .responstable td {
+        border: 1px solid #D9E4E6;
+      }
+    }
+
+    .responstable th,
+    .responstable td {
+      text-align: left;
+      margin: .5em 1em;
+    }
+
+    @media (min-width: 480px) {
+
+      .responstable th,
+      .responstable td {
+        display: table-cell;
+        padding: 1em;
+      }
+    }
+
+    body {
+      padding: 0 2em;
+      font-family: Arial, sans-serif;
+      color: #EE4D2D;
+      background: #f2f2f2;
+    }
+
+    h1 {
+      font-family: Verdana;
+      font-weight: normal;
+      color: #EE4D2D;
+    }
+
+    h1 span {
+      color: #EE4D2D;;
+    }
+    .container{
+      color: #EE4D2D;
+    }
+  </style></head>
+
+
+<body class="" style="">
+<div class="container mt-6">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card border-0 shadow-lg">
+        <div class="card-body">
+          <form>
+            <div class="form-group row">
+              <label for="khach-hang" class="text-muted col-sm-4 col-form-label"><b>Khách Hàng:</b></label>
+              <div class="col-sm-8">
+                <div class="input-group">
+                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#khachHang"><i class="bi bi-person-fill me-1"></i>Chọn Khách Hàng</button>
+                  <button class="btn btn-outline-primary ms-3" type="button"><i class="bi bi-person-plus-fill me-1"></i> Thêm Khách Hàng</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="do-thanh-ly" class="text-muted col-sm-4 col-form-label"><b>Đồ Thanh Lý:</b></label>
+              <div class="col-sm-8">
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#doThanhLy"><i class="bi bi-cart3 me-1"></i>Chọn Đồ Thanh Lý</button>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="tong-tien" class="text-muted col-sm-4 col-form-label"><b>Tổng Tiền:</b> </label>
+              <div class="col-sm-8">
+                <input type="text" id="tong-tien" class="form-control" aria-describedby="tong-tien-help" placeholder="Tổng tiền" aria-label="Tổng Tiền">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="ngay-thanh-ly" class="text-muted col-sm-4 col-form-label"><b>Ngày Thanh Lý:</b></label>
+              <div class="col-sm-8">
+                <input type="date" id="ngay-thanh-ly" class="form-control" aria-describedby="ngay-thanh-ly-help" placeholder="Ngày Thanh Lý" aria-label="Ngày Thanh Lý">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12 text-end">
+                <button type="button" class="btn btn-outline-primary me-2">Huỷ</button>
+                <button type="button" class="btn btn-outline-primary">Thêm Hợp Đồng</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- MODAL ĐỒ Thanh Lý -->
+<div class="modal fade" id="doThanhLy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Chọn Đồ Thanh Toán</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row">
+          <label for="ten-do" class="text-muted col-sm-4 col-form-label"><b>Tên Đồ:</b> </label>
+          <div class="col-sm-8">
+            <input type="text" id="ten-do" class="form-control" aria-describedby="ten-do-help" aria-label="Tên Đồ">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="khach-hang" class="text-muted col-sm-4 col-form-label"><b>Loại Đồ:</b></label>
+          <div class="col-sm-8">
+            <div class="input-group">
+              <select id="khach-hang" class="form-select" aria-label="Khách Hàng">
+                <option selected="">Chọn</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gia" class="text-muted col-sm-4 col-form-label"><b>Giá:</b> </label>
+          <div class="col-sm-8">
+            <input type="text" id="gia" class="form-control" aria-describedby="gia-help">
+          </div>
+        </div>
+        <button style="margin-bottom: 20px;" class="btn btn-outline-primary float-end me-2">
+          <i class="bi bi-search"></i> Tìm kiếm
+        </button>
+        <div class="container">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Tên Đồ</th>
+              <th>Loại Đồ</th>
+              <th>Số Lượng</th>
+              <th>Giá</th>
+              <th>Chọn</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="bg-white">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-outline-primary"><i class="bi bi-plus"></i></button>
+              </td>
+            </tr>
+            <tr class="bg-black">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-outline-primary"><i class="bi bi-plus"></i></button>
+              </td>
+            </tr>
+            <tr class="bg-white">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-outline-primary"><i class="bi bi-plus"></i></button>
+              </td>
+            </tr>
+            <tr class="bg-black">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-outline-primary"><i class="bi bi-plus"></i></button>
+              </td>
+            </tr>
+            <tr class="bg-white">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <button class="btn btn-outline-primary"><i class="bi bi-plus"></i></button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <nav aria-label="Page navigation example" style="display: flex; justify-content: center;">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- MODAL CHỌN KHÁCH HÀNG -->
+<div class="modal fade" id="khachHang" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Chọn khách hàng</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Tìm Kiếm">
+        <button class="btn btn-outline-primary float-end" type="submit"><i class="bi bi-search"></i> Tìm Kiếm</button>
+
+        <table class="responstable">
+          <tbody><tr>
+            <th data-th="Driver details"><span>Mã khách hàng</span></th>
+            <th>Tên khách hàng</th>
+            <th>CCCD</th>
+            <th></th>
+          </tr>
+
+          <tr>
+            <td>Steffie</td>
+            <td>Foo</td>
+            <td>132213321</td>
+            <td><button type="button" class="btn btn-dark">Chọn</button></td>
+          </tr>
+
+          <tr>
+            <td>Stan</td>
+            <td>Foo</td>
+            <td>132132132213</td>
+            <td><button type="button" class="btn btn-dark">Chọn</button></td>
+          </tr>
+
+          <tr>
+            <td>Stella</td>
+            <td>Foo</td>
+            <td>312213</td>
+            <td><button type="button" class="btn btn-dark">Chọn</button></td>
+          </tr>
+          </tbody></table>
+        <nav aria-label="Page navigation example" style="display: flex; justify-content: center;">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body></html>

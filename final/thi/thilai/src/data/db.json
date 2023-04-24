@@ -1,0 +1,40 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "tenSinhVien": "Nam",
+      "tenNhom": "nhom 1",
+      "tenDeTai": "66",
+      "giaoVienHuongDan": "GV TRUNG",
+      "email": "23@gmail.com",
+      "soDienThoai": "132312123432"
+    },
+    {
+      "id": "2",
+      "tenSinhVien": "nam",
+      "tenNhom": "nhom 2",
+      "tenDeTai": "66",
+      "giaoVienHuongDan": "GV TRUNG",
+      "email": "23@gmail.com",
+      "soDienThoai": "1323121231"
+    },
+    {
+      "id": "312",
+      "tenSinhVien": "qqqq",
+      "tenNhom": "nhom 1",
+      "tenDeTai": "312",
+      "giaoVienHuongDan": "GV TRUNG",
+      "email": "132@gmail.com",
+      "soDienThoai": "1321111111"
+    },
+    {
+      "id": "33",
+      "tenSinhVien": "13231",
+      "tenNhom": "nhom 3",
+      "tenDeTai": "addas",
+      "giaoVienHuongDan": "GV HAI",
+      "email": "Nam@gmail.com",
+      "soDienThoai": "1122222222"
+    }
+  ]
+}

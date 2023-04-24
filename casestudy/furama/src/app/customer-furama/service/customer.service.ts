@@ -28,4 +28,9 @@ export class CustomerService {
   deleteCustomer(id: string): Observable<any> {
     return this.httpClient.delete(this.URL_API_CUSTOMER + id);
   }
+  findByName(name:String):Observable<Customer[]>{
+    // if(name = "") {
+    //   return this.getAllCustomer();
+         return this.httpClient.get<Customer[]>("http://localhost:3000/customers?customerName_like="+name);
+  }
 }
